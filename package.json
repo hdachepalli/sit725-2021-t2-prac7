@@ -1,0 +1,25 @@
+{
+  "name": "sit725-2021-t2-prac3-",
+  "version": "1.0.0",
+  "description": "sit725-2021-t2-prac3",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdachepalli/sit725-2021-t2-prac3-.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "hdachepalli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hdachepalli/sit725-2021-t2-prac3-/issues"
+  },
+  "homepage": "https://github.com/hdachepalli/sit725-2021-t2-prac3-#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
