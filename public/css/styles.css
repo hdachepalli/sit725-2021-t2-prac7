@@ -1,0 +1,31 @@
+.navbar-size {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .user-image-size {
+    height: 56px;
+    margin: 4px 0;
+  }
+  .main-body {
+    min-height: 100%;
+    background-color: rgba(132, 27, 231, 0.452);
+  }
+  .materialboxed-image {
+    margin: 0 auto;
+    height: 400px;
+  }
+  .click-me-button {
+    background-color: rgba(27, 207, 231, 0.185);
+    margin-top: 50px;
+  }
+  
+  .click-me-button:hover {
+    background-color: rgba(231, 27, 27, 0.123);
+  }
+  .card-text {
+    color: #212121;
+  }
+  
+  nav {
+    background-color: rgba(231, 27, 129, 0.014);
+  }
