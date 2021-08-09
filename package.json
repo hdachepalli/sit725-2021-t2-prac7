@@ -1,14 +1,14 @@
 {
-  "name": "sit725-2021-t2-prac3-",
+  "name": "sit725-2021-t2-prac4",
   "version": "1.0.0",
-  "description": "sit725-2021-t2-prac3",
+  "description": "sit725-2021-t2-prac4",
   "main": "server.js",
   "scripts": {
     "start": "node sever.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hdachepalli/sit725-2021-t2-prac3-.git"
+    "url": "git+https://github.com/hdachepalli/sit725-2021-t2-prac4.git"
   },
   "keywords": [
     "node"
@@ -16,9 +16,9 @@
   "author": "hdachepalli",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hdachepalli/sit725-2021-t2-prac3-/issues"
+    "url": "https://github.com/hdachepalli/sit725-2021-t2-prac4/issues"
   },
-  "homepage": "https://github.com/hdachepalli/sit725-2021-t2-prac3-#readme",
+  "homepage": "https://github.com/hdachepalli/sit725-2021-t2-prac4#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
