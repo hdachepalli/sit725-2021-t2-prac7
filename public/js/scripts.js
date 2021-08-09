@@ -2,14 +2,14 @@ const cardList = [
     {
         title: "Location 1",
         image: "images/Location 1.jpg",
-        link: "About Location 1",
-        desciption: "Demo desciption about Location 1"
+        link: "About twelve apostles",
+        desciption: "The Twelve Apostles is a collection of limestone stacks off the shore of Port Campbell National Park"
     },
     {
         title: "Location 2",
         image: "images/Location 2.jpg",
-        link: "About Location 2",
-        desciption: "Demo desciption about Location 2"
+        link: "About Sydney opera House",
+        desciption: "The Sydney Opera House is a multi-venue performing arts centre on Sydney Harbour"
     }
 ]
 const clickMe = () => {
@@ -18,10 +18,10 @@ const clickMe = () => {
 
 const submitForm = () => {
     let formData = {};
-    formData.first_name = $('#Email').val();
-    formData.last_name = $('#Username').val();
+    formData.first_name = $('#first_name').val();
+    formData.last_name = $('#last_name').val();
     formData.password = $('#Password').val();
-    formData.email = $('#confirm password').val();
+    formData.email = $('#email').val();
 
     console.log("Form Data Submitted: ", formData);
 }
