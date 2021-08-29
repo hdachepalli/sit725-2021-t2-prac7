@@ -20,8 +20,9 @@
   },
   "homepage": "https://github.com/hdachepalli/sit725-2021-t2-prac5#readme",
   "dependencies": {
+    "controllers": "0.0.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongodb": "^4.1.0"
+    "mongodb": "^4.1.1"
   }
 }
