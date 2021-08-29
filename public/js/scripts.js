@@ -5,10 +5,10 @@ const clickMe = () => {
     alert("Need to sign in to look at the application")
 }
 
-const addProjectToApp = (project) => {
+const addLocationToApp = (location) => {
     $.ajax({
-        url: 'api/projects',
-        data: project,
+        url: 'api/locations',
+        data: location,
         type: 'POST',
         success: (result) => {
             alert(result.message);
@@ -25,11 +25,11 @@ const submitForm = () => {
     formData.description = $('#description').val();
 
     console.log("Form Data Submitted: ", formData);
-    addProjectToApp(formData);
+    addLocationToApp(formData);
 }
 
-const getProjects = () => {
-    $.get('/api/project',(response) => {
+const getLocations = () => {
+    $.get('/api/location',(response) => {
         if(response.statusCode==200){
             console.log(response)
             addCards(response.data); 
@@ -56,6 +56,6 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitForm();
     })
-    getProjects();
+    getLocations();
     $('.modal').modal();
   });

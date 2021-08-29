@@ -1,8 +1,11 @@
 require('dotenv').config()
 var express = require("express")
 var app = express()
+let dbConnect = require ("./dbConnect");
 const MongoClient = require('mongodb').MongoClient;
-let projectCollection;
+let locationCollection;
+
+let locationsRoute = require('./routes/Locations')
 
 const uri = "mongodb+srv://sit-725-2021:Harsha8897@sit-725-t2-week4.22slh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" 
 const client = new MongoClient(uri,{ useNewUrlParser: true})
@@ -10,10 +13,11 @@ const client = new MongoClient(uri,{ useNewUrlParser: true})
 app.use(express.static(__dirname + '/public'))
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use('/api/locations',locationsRoute)
 
 const createColllection = (collectionName) => {
     client.connect((err,db) => {
-        projectCollection = client.db().collection(collectionName);
+        locationCollection = client.db().collection(collectionName);
         if(!err) {
             console.log('MongoDB Connected')
         }
@@ -28,16 +32,16 @@ const cardList = [
 
 ]
 
-const insertProjects = (project,callback) => {
-    projectCollection.insert(project,callback);
+const insertLocations = (location,callback) => {
+    locationCollection.insert(location,callback);
 }
 
-const getProjects = (callback) => {
-    projectCollection.find({}).toArray(callback);
+const getLocations = (callback) => {
+    locationCollection.find({}).toArray(callback);
 }
 
-app.get('/api/projects',(req,res) => {
-    getProjects((err,result) => {
+app.get('/api/locations',(req,res) => {
+    getLocations((err,result) => {
         if(err) {
             res.json({statusCode: 400, message:err})
         }
@@ -47,15 +51,15 @@ app.get('/api/projects',(req,res) => {
      })
 })
 
-app.post('/api/projects',(req,res) => {
-    console.log("New Project add", req.body)
-    var newProject = req.body;
-    insertProjects(newProject,(err,result) => {
+app.post('/api/locations',(req,res) => {
+    console.log("New Location added", req.body)
+    var newLocation = req.body;
+    insertLocations(newLocation,(err,result) => {
         if(err) {
             res.json({statusCode: 400, message: err})
       }
         else {
-            res.json({statusCode: 200, message:"Project has Successfully placed", data: result})
+            res.json({statusCode: 200, message:"Location has Successfully placed", data: result})
         }
      })
 })
