@@ -3,6 +3,9 @@ var express = require("express")
 var app = express()
 let dbConnect = require ("./dbConnect");
 const MongoClient = require('mongodb').MongoClient;
+let http = require('http').createServer(app);
+let io = require('socket.io')(http);
+
 let locationCollection;
 
 let locationsRoute = require('./routes/Locations')
@@ -64,6 +67,16 @@ app.post('/api/locations',(req,res) => {
      })
 })
 
+io.on('connection', (socket) => {
+    console.log('a user connected');
+    socket.on('disconnect', () => {
+      console.log('user disconnected');
+    });
+    setInterval(()=>{
+      socket.emit('number', parseInt(Math.random()*10));
+    }, 1000);
+  
+  });
 var port = process.env.port || 4000;
 
 app.listen(port, () => {

@@ -38,8 +38,7 @@
             <h1 id="heading">Welcome to official website of TOUR</h1>
             <p class="flow-text">This is a demo application for TOUR in which the user can make a day plan by selecting his list of places</p>
           </div>
-          <div class="col s12 center-align">
-            <img class="materialboxed materialboxed-image" src="images/livedemo.png">
+        
           </div>
           <div class="col s12 center-align">
             <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Click Me</a>
@@ -49,7 +48,7 @@
           <div class="col s4 center-align">
             <div class="card medium">
               <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="images/kitten.jpg">
+                <img class="activator" src="images/Location.jpg">
               </div>
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4">TOUR<i class="material-icons right">more_vert</i></span>
@@ -98,7 +97,10 @@
         </div>
       </div>
     </main>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- socket IO Served by the server -->
+  <script src="/socket.io/socket.io.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="js/scripts.js"></script>
