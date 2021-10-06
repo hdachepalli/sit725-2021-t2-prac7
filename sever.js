@@ -10,7 +10,15 @@ let locationCollection;
 
 let locationsRoute = require('./routes/Locations')
 
-const uri = "mongodb+srv://sit-725-2021:Harsha8897@sit-725-t2-week4.22slh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" 
+//const mongoose = require("mongoose");
+
+//mongoose.connect("mongodb+srv://harsha:reddy@cluster0.22slh.mongodb.net/Tour", {useNewUrlParser: true, useUnifiedTopology: true})
+//.then( () => console.log("connection succesfull"))
+
+//.catch( (err) => console.log(err));
+
+
+const uri = "mongodb+srv://harsha:reddy@cluster0.22slh.mongodb.net/Tour" 
 const client = new MongoClient(uri,{ useNewUrlParser: true})
 
 app.use(express.static(__dirname + '/public'))
@@ -19,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api/locations',locationsRoute)
 
 const createColllection = (collectionName) => {
-    client.connect((err,db) => {
+    client.connect((err) => {
         locationCollection = client.db().collection(collectionName);
         if(!err) {
             console.log('MongoDB Connected')
