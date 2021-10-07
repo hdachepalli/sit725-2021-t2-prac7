@@ -4,6 +4,23 @@ const cardList = [
 const clickMe = () => {
     alert("Need to sign in to look at the application")
 }
+const sidenav = document.querySelector('.sidenav');
+M.Sidenav.init(sidenav, {});
+const slider = document.querySelector('.slider');
+M.Slider.init(slider, {
+    indicators: false,
+    height: 500,
+    transition: 500,
+    interval: 6000
+});
+const ac = document.querySelector('.autocomplete');
+M.Autocomplete.init(ac, {
+    data: {
+        "Twelveapostles": null,
+        "sydney": null,
+        
+    }
+});
 
 const addLocationToApp = (location) => {
     $.ajax({

@@ -1,4 +1,4 @@
-# sit725-2021-t2-prac3-
+# TOUR
 This is a basic application about TOUR an web application where people can plan their outing looking for good vacation places.
 
 ## about the application

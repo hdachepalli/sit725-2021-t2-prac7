@@ -1,31 +1,9 @@
-.navbar-size {
-    width: 60%;
-    margin: 0 auto;
-  }
-  .user-image-size {
-    height: 56px;
-    margin: 4px 0;
-  }
-  .main-body {
-    min-height: 100%;
-    background-color: rgba(231, 27, 27, 0.541);
-  }
-  .materialboxed-image {
-    margin: 0 auto;
-    height: 400px;
-  }
-  .click-me-button {
-    background-color: rgba(231, 85, 27, 0.24);
-    margin-top: 50px;
-  }
-  
-  .click-me-button:hover {
-    background-color: rgba(231, 27, 27, 0.123);
-  }
-  .card-text {
-    color: #212121;
-  }
-  
-  nav {
-    background-color: rgba(231, 27, 129, 0.014);
-  }
+.section-search input {
+  padding: 5px;
+  font-size: 18px;
+  width: 90%;
+  border: #f4f4f4 3px solid;
+}
+.section-follow.fa-4x{
+  margin: 5px 10px;
+}
