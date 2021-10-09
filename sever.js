@@ -10,14 +10,6 @@ let locationCollection;
 
 let locationsRoute = require('./routes/Locations')
 
-//const mongoose = require("mongoose");
-
-//mongoose.connect("mongodb+srv://harsha:reddy@cluster0.22slh.mongodb.net/Tour", {useNewUrlParser: true, useUnifiedTopology: true})
-//.then( () => console.log("connection succesfull"))
-
-//.catch( (err) => console.log(err));
-
-
 const uri = "mongodb+srv://harsha:reddy@cluster0.22slh.mongodb.net/Tour" 
 const client = new MongoClient(uri,{ useNewUrlParser: true})
 
